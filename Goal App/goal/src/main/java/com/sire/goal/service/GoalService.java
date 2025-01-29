@@ -93,22 +93,7 @@ public class GoalService {
         return new GoalResponse(goal,"Card updated successfully");
     }
 
-//    public Goal deleteGoal(Integer goalId){
-//        if (goalId == null) {
-//            return new GoalResponse("Please enter card ID");
-//        }
-//        Goal goal = goalRepository.findById(goalId).orElseThrow();
-//        if (goal == null) {
-//            return new GoalResponse("Goal not found! Please try again!");
-//        }
-//        try{
-//            goalRepository.deleteById(goalId);
-//        } catch (Exception e){
-//            return new GoalResponse("Something went wrong" );
-//        }
-//
-//        return new GoalResponse(goal,"Goal deleted successfully");
-//    }
+
 
 
     public GoalResponse deleteGoal(Integer goalId) {
@@ -124,13 +109,7 @@ public class GoalService {
         }catch (Exception e){
             return new GoalResponse("Something went wrong!");
         }
-//        MyCard newMyCard = new MyCard(
-//                myCard.getId(),
-//                myCard.getName(),
-//                myCard.getCardNumber(),
-//                myCard.getCvv(),
-//                myCard.getExpiryDate()
-//        );
+
         return new GoalResponse(goal, "Goal deleted successfully!");
     }
 }
